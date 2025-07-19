@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מערכת מידע רפואית 🩺</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Alef', Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #00A4B4, #FF6F61);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(to right, #005B66, #003B46);
+            padding: 2rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            animation: slideDown 1.5s ease-in-out;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: glow 2s infinite alternate;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background: #fff;
+            padding: 1rem;
+            margin: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+        }
+
+        nav a {
+            color: #005B66;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            background: #FF6F61;
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1300px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            background: #fff;
+            border-radius: 15px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #00A4B4;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Medical Icons */
+        .medical-icon {
+            font-size: 2.2rem;
+            margin-left: 0.5rem;
+            color: #FF6F61;
+        }
+
+        /* Tableau Embed */
+        .tableau-embed {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            animation: pulse 2s infinite;
+        }
+
+        .tableau-embed h3 {
+            color: #005B66;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .tableau-embed iframe {
+            width: 100%;
+            height: 700px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        /* Interactive Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .stat-card h3 {
+            font-size: 1.3rem;
+            color: #FF6F61;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-card p {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #005B66;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #005B66;
+            color: #fff;
+            margin-top: 2rem;
+        }
+
+        /* Animations */
+        @keyframes slideDown {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes glow {
+            from { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); }
+            to { text-shadow: 2px 2px 10px rgba(255, 111, 97, 0.7); }
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 164, 180, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(0, 164, 180, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 164, 180, 0); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .tableau-embed iframe {
+                height: 500px;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>מערכת מידע רפואית 🩺</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#overview">סקירה כללית 📈</a></li>
+            <li><a href="#system">אודות המערכת 🩺</a></li>
+            <li><a href="#dashboards">דשבורדים רפואיים 📊</a></li>
+            <li><a href="#stats">נתונים מרכזיים 🌟</a></li>
+            <li><a href="#contact">צור קשר 📩</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="section" id="overview">
+            <h2><i class="fas fa-heartbeat medical-icon"></i>סקירה כללית 📈</h2>
+            <p>ברוכים הבאים למערכת המידע הרפואית שלנו! גלו נתונים רפואיים בצורה ויזואלית, מודרנית וידידותית. המערכת משלבת טכנולוגיית Tableau מתקדמת עם עיצוב מושך שמבטיח חוויה מקצועית ומרתקת! 😄</p>
+        </div>
+
+        <div class="section" id="system">
+            <h2><i class="fas fa-stethoscope medical-icon"></i>אודות המערכת 🩺</h2>
+            <p>המערכת שלנו היא מערכת מידע רפואית מתקדמת שנועדה לאסוף ולעקוב אחר נתוני מטופלים שעברו בדיקות רפואיות. היא משמשת קופות חולים ומרפאות, ומטרתה לסייע לרופאים ולאנשי מקצוע להבין את מצב הבריאות של מטופלים, לזהות בעיות רפואיות בזמן ולקבוע האם נדרש טיפול.</p>
+            <p>המערכת מאחסנת נתונים כגון גיל המטופל, מגדר, אזור מגורים, שנת הבדיקה, סוג הבדיקה (כמו בדיקת דם, סוכר או א.ק.ג), אבחנה (למשל סוכרת או כולסטרול גבוה), צורך בטיפול, תוצאות מספריות, רמת סיכון (1-5), מספר ביקורים שנתיים ועלות טיפול ממוצעת.</p>
+            <p>בעזרת נתונים אלו, ניתן לזהות מגמות כלליות, לאתר בעיות רפואיות נפוצות ולהשוות בין אזורים או קבוצות גיל שונות. התובנות מוצגות בצורה ויזואלית דרך Tableau Public, מה שמקל על קבלת החלטות רפואיות וניהוליות. 🚑</p>
+        </div>
+
+        <div class="section" id="dashboards">
+            <h2><i class="fas fa-chart-line medical-icon"></i>דשבורדים רפואיים 📊</h2>
+            <p>גלו את הדשבורדים האינטראקטיביים שלנו המופעלים על ידי Tableau. לחצו, גלשו וגלו תובנות רפואיות חשובות! ✨</p>
+            <div class="tableau-embed">
+                <h3>דשבורד ניהולי 🩺</h3>
+                <iframe src="https://public.tableau.com/views/3_17529225888160/sheet0?:embed=true&:showVizHome=no" title="דשבורד ניהולי"></iframe>
+            </div>
+            <div class="tableau-embed">
+                <h3>דשבורד אסטרטגי 📈</h3>
+                <iframe src="https://public.tableau.com/views/2_17529225601750/sheet4?:embed=true&:showVizHome=no" title="דשבורד אסטרטגי"></iframe>
+            </div>
+            <div class="tableau-embed">
+                <h3>דשבורד תפעולי ⚙️</h3>
+                <iframe src="https://public.tableau.com/views/_17529224127360/sheet8?:embed=true&:showVizHome=no" title="דשבורד תפעולי"></iframe>
+            </div>
+        </div>
+
+        <div class="section" id="stats">
+            <h2><i class="fas fa-chart-pie medical-icon"></i>נתונים מרכזיים 🌟</h2>
+            <div class="stats" id="stats-container">
+                <!-- Stats will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <div class="section" id="contact">
+            <h2><i class="fas fa-envelope medical-icon"></i>צור קשר 📩</h2>
+            <p>יש לכם שאלות או צורך בניתוח מותאם אישית? צרו קשר במייל: <a href="mailto:medical@datahub.com" style="color: #FF6F61;">medical@datahub.com</a>. אנחנו כאן כדי לעזור לכם לקבל החלטות מבוססות נתונים! 😊</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 מערכת מידע רפואית. כל הזכויות שמורות. נבנה עם ❤️ ו🩺</p>
+    </footer>
+
+    <script>
+        // Sample stats data with medical context
+        const statsData = [
+            { title: "מטופלים שנבדקו", value: "15,000+", emoji: "👩‍⚕️" },
+            { title: "בדיקות רפואיות", value: "2M+", emoji: "🩺" },
+            { title: "אבחנות זוהו", value: "1,000+", emoji: "💉" },
+            { title: "טיפולים מומלצים", value: "800+", emoji: "💊" }
+        ];
+
+        // Populate stats dynamically
+        const statsContainer = document.getElementById('stats-container');
+        statsData.forEach(stat => {
+            const statCard = document.createElement('div');
+            statCard.className = 'stat-card';
+            statCard.innerHTML = `
+                <h3>${stat.title} ${stat.emoji}</h3>
+                <p>${stat.value}</p>
+            `;
+            statsContainer.appendChild(statCard);
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Animation on scroll
+        const sections = document.querySelectorAll('.section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'none'; // Reset animation
+                    setTimeout(() => {
+                        entry.target.style.animation = 'slideUp 1s ease-out';
+                    }, 10);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        sections.forEach(section => observer.observe(section));
+    </script>
+</body>
+</html>
