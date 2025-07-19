@@ -15,7 +15,7 @@
         }
 
         body {
-            background: linear-gradient(135deg, #00A4B4, #FF6F61);
+            background: url('https://www.transparenttextures.com/patterns/45-degree-fabric-light.png'), linear-gradient(135deg, #0077B6, #D00000);
             color: #333;
             line-height: 1.6;
             min-height: 100vh;
@@ -23,123 +23,124 @@
 
         /* Header Styles */
         header {
-            background: linear-gradient(to right, #005B66, #003B46);
+            background: linear-gradient(to right, #003087, #001F54);
             padding: 2rem;
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             animation: slideDown 1.5s ease-in-out;
         }
 
         header h1 {
-            font-size: 3rem;
+            font-size: 3.2rem;
             color: #fff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
             animation: glow 2s infinite alternate;
         }
 
         /* Navigation Styles */
         nav {
-            background: #fff;
-            padding: 1rem;
+            background: #F5F6F5;
+            padding: 1.2rem;
             margin: 1rem 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
         }
 
         nav ul {
             list-style: none;
             display: flex;
             justify-content: center;
-            gap: 2.5rem;
+            gap: 3rem;
         }
 
         nav a {
-            color: #005B66;
+            color: #003087;
             text-decoration: none;
-            font-weight: 600;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            transition: background 0.3s ease, color 0.3s ease;
+            font-weight: 700;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
         }
 
         nav a:hover {
-            background: #FF6F61;
+            background: #D00000;
             color: #fff;
-            transform: scale(1.05);
+            transform: scale(1.1);
         }
 
         /* Main Content */
         .container {
-            max-width: 1300px;
+            max-width: 1400px;
             margin: 2rem auto;
             padding: 0 2rem;
         }
 
         .section {
-            background: #fff;
-            border-radius: 15px;
-            padding: 2.5rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            background: #F5F6F5;
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .section:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
 
         .section h2 {
-            font-size: 2rem;
+            font-size: 2.2rem;
             margin-bottom: 1.5rem;
-            color: #00A4B4;
+            color: #0077B6;
             display: flex;
             align-items: center;
         }
 
         /* Medical Icons */
         .medical-icon {
-            font-size: 2.2rem;
-            margin-left: 0.5rem;
-            color: #FF6F61;
+            font-size: 2.5rem;
+            margin-left: 0.8rem;
+            color: #D00000;
         }
 
         /* Tableau Embed */
         .tableau-embed {
             text-align: center;
-            margin: 2rem 0;
-            padding: 1.5rem;
-            background: #f8f9fa;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin: 2.5rem 0;
+            padding: 2rem;
+            background: #E9ECEF;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
             animation: pulse 2s infinite;
         }
 
         .tableau-embed h3 {
-            color: #005B66;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
+            color: #003087;
+            margin-bottom: 1.2rem;
+            font-size: 1.7rem;
         }
 
         .tableau-embed iframe {
             width: 100%;
-            height: 700px;
+            height: 800px;
             border: none;
-            border-radius: 10px;
+            border-radius: 15px;
         }
 
         /* Interactive Stats */
         .stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2.5rem;
         }
 
         .stat-card {
-            background: #f8f9fa;
-            padding: 2rem;
+            background: #E9ECEF;
+            padding: 2.5rem;
             border-radius: 15px;
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -147,27 +148,27 @@
         }
 
         .stat-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
 
         .stat-card h3 {
-            font-size: 1.3rem;
-            color: #FF6F61;
-            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+            color: #D00000;
+            margin-bottom: 0.8rem;
         }
 
         .stat-card p {
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             font-weight: bold;
-            color: #005B66;
+            color: #003087;
         }
 
         /* Footer */
         footer {
             text-align: center;
-            padding: 1.5rem;
-            background: #005B66;
+            padding: 2rem;
+            background: #003087;
             color: #fff;
             margin-top: 2rem;
         }
@@ -179,33 +180,33 @@
         }
 
         @keyframes glow {
-            from { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); }
-            to { text-shadow: 2px 2px 10px rgba(255, 111, 97, 0.7); }
+            from { text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4); }
+            to { text-shadow: 3px 3px 12px rgba(208, 0, 0, 0.7); }
         }
 
         @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(0, 164, 180, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(0, 164, 180, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(0, 164, 180, 0); }
+            0% { box-shadow: 0 0 0 0 rgba(0, 119, 182, 0.7); }
+            70% { box-shadow: 0 0 0 20px rgba(0, 119, 182, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 119, 182, 0); }
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
             nav ul {
                 flex-direction: column;
-                gap: 1rem;
+                gap: 1.5rem;
             }
 
             .tableau-embed iframe {
-                height: 500px;
+                height: 600px;
             }
 
             header h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
 
             .section h2 {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
             }
         }
     </style>
@@ -228,7 +229,7 @@
     <div class="container">
         <div class="section" id="overview">
             <h2><i class="fas fa-heartbeat medical-icon"></i>סקירה כללית 📈</h2>
-            <p>ברוכים הבאים למערכת המידע הרפואית שלנו! גלו נתונים רפואיים בצורה ויזואלית, מודרנית וידידותית. המערכת משלבת טכנולוגיית Tableau מתקדמת עם עיצוב מושך שמבטיח חוויה מקצועית ומרתקת! 😄</p>
+            <p>ברוכים הבאים למערכת המידע הרפואית שלנו! חקרו נתונים רפואיים בצורה ויזואלית, מודרנית וידידותית. המערכת משלבת טכנולוגיית Tableau מתקדמת עם עיצוב מושך ומקצועי שמבטיח חוויה מרתקת ומדויקת! 😄</p>
         </div>
 
         <div class="section" id="system">
@@ -264,7 +265,7 @@
 
         <div class="section" id="contact">
             <h2><i class="fas fa-envelope medical-icon"></i>צור קשר 📩</h2>
-            <p>יש לכם שאלות או צורך בניתוח מותאם אישית? צרו קשר במייל: <a href="mailto:medical@datahub.com" style="color: #FF6F61;">medical@datahub.com</a>. אנחנו כאן כדי לעזור לכם לקבל החלטות מבוססות נתונים! 😊</p>
+            <p>יש לכם שאלות או צורך בניתוח מותאם אישית? צרו קשר במייל: <a href="mailto:medical@datahub.com" style="color: #D00000;">medical@datahub.com</a>. אנחנו כאן כדי לעזור לכם לקבל החלטות מבוססות נתונים! 😊</p>
         </div>
     </div>
 
@@ -308,9 +309,9 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.animation = 'none'; // Reset animation
+                    entry.target.style.animation = 'none';
                     setTimeout(() => {
-                        entry.target.style.animation = 'slideUp 1s ease-out';
+                        entry.target.style.animation = 'pulse 1s ease-out';
                     }, 10);
                 }
             });
